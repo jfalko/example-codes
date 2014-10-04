@@ -1,0 +1,19 @@
+/*
+  Used in Unity to reference scripts on other GameObjects in order to 
+  call their functions or reach their variables
+*/
+var target : Transform; 
+var targetScript : Script; 
+
+function Start () {
+  var targetObject : GameObject = GameObject.Find("Player");
+
+  if (targetObject )
+  {
+    target = targetObject.transform;	
+    targetScript = target.GetComponent( Script );
+  }
+}
+
+//I funktion: 
+//targetScript.variable = targetScript.variable-1;
